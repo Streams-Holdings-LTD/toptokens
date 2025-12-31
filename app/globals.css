@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-family-mono: "Geist Mono", ui-monospace, monospace;
+  
+  --color-background: 222 14% 5%;
+  --color-foreground: 0 0% 98%;
+  --color-card: 222 14% 7%;
+  --color-card-foreground: 0 0% 98%;
+  --color-popover: 222 14% 7%;
+  --color-popover-foreground: 0 0% 98%;
+  --color-primary: 165 85% 45%;
+  --color-primary-foreground: 0 0% 98%;
+  --color-secondary: 222 14% 10%;
+  --color-secondary-foreground: 0 0% 98%;
+  --color-muted: 222 14% 10%;
+  --color-muted-foreground: 0 0% 60%;
+  --color-accent: 165 85% 45%;
+  --color-accent-foreground: 0 0% 98%;
+  --color-destructive: 0 72% 51%;
+  --color-destructive-foreground: 0 0% 98%;
+  --color-border: 222 14% 15%;
+  --color-input: 222 14% 10%;
+  --color-ring: 165 85% 45%;
+  --color-chart-1: 165 85% 45%;
+  --color-chart-2: 155 70% 50%;
+  --color-chart-3: 175 75% 55%;
+  --color-chart-4: 160 65% 48%;
+  --color-chart-5: 150 80% 52%;
+  
+  --radius: 0.5rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Hide scrollbars while keeping functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
